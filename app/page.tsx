@@ -62,28 +62,16 @@ export default function Page() {
       })
 
       const imgData = canvas.toDataURL('image/png')
-      const imgWidth = 210
-      const imgHeight = (canvas.height * imgWidth) / canvas.width
-      
       const pdf = new jsPDF({
         orientation: 'portrait',
         unit: 'mm',
         format: 'a4',
       })
 
-      let heightLeft = imgHeight
-      let position = 0
+      const imgWidth = 210
+      const imgHeight = (canvas.height * imgWidth) / canvas.width
 
-      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight)
-      heightLeft -= 297
-
-      while (heightLeft > 0) {
-        position = heightLeft - imgHeight
-        pdf.addPage()
-        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight)
-        heightLeft -= 297
-      }
-
+      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight)
       pdf.save('Hair_Salon_Quynh_Huong_PriceList.pdf')
     } catch (error) {
       console.error('Error exporting PDF:', error)
@@ -103,48 +91,48 @@ export default function Page() {
       </button>
 
       {/* Hidden Export Container - Full content for PDF */}
-      <div ref={exportRef} className="absolute -left-full -top-full w-full bg-white" style={{ width: '210mm', padding: '32mm' }}>
+      <div ref={exportRef} className="absolute -left-full -top-full w-full bg-white" style={{ width: '210mm', padding: '15mm' }}>
         <div className="flex flex-col">
           {/* Header */}
-          <div className="mb-6 pb-4">
+          <div className="mb-2 pb-2">
             {/* Logo at Left */}
-            <div className="flex items-start gap-3 mb-3">
+            <div className="flex items-start gap-2 mb-1">
               <div className="flex-shrink-0">
-                <div className="text-5xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
+                <div className="text-3xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
               </div>
               <div className="flex-1">
-                <div className="text-xs font-semibold tracking-widest text-muted-foreground mb-0.5">HAIR SALON</div>
-                <h1 className="text-2xl font-light italic text-primary">Quỳnh Hương</h1>
+                <div className="text-xs font-semibold tracking-widest text-muted-foreground mb-0">HAIR SALON</div>
+                <h1 className="text-lg font-light italic text-primary">Quỳnh Hương</h1>
               </div>
             </div>
 
             {/* Contact Info - Center */}
-            <div className="border-t border-primary pt-3 text-center text-xs leading-relaxed text-foreground">
-              <p className="font-semibold mb-1">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
-              <p className="font-bold text-primary">☎ 0985 257 577</p>
+            <div className="border-t border-primary pt-2 text-center text-xs text-foreground">
+              <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
+              <p className="font-bold text-primary text-xs">☎ 0985 257 577</p>
             </div>
           </div>
 
           {/* Table Header */}
-          <div className="grid grid-cols-3 gap-2 border-b-2 border-primary pb-2 text-xs font-bold text-primary">
+          <div className="grid grid-cols-3 gap-1 border-b-2 border-primary pb-1 text-xs font-bold text-primary">
             <div>Dịch Vụ</div>
             <div>Service</div>
             <div className="text-right">Giá / Price</div>
           </div>
 
           {/* Services List */}
-          <div className="py-2 text-xs">
+          <div className="py-1 text-xs">
             {services.map((service, index) => (
-              <div key={index} className={`grid grid-cols-3 gap-2 border-b border-secondary py-2 px-2 ${
+              <div key={index} className={`grid grid-cols-3 gap-1 border-b border-secondary py-1 px-1 ${
                 service.highlight ? 'bg-red-50' : ''
               }`}>
                 <div className={`font-medium ${service.highlight ? 'text-primary font-bold' : 'text-foreground'}`}>
                   {service.vietnameseName}
                 </div>
-                <div className={`italic ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
+                <div className={`italic text-xs ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
                   {service.englishName}
                 </div>
-                <div className={`text-right font-semibold ${
+                <div className={`text-right font-semibold text-xs ${
                   service.highlight ? 'text-primary' : 'text-foreground'
                 }`}>
                   {service.price}
@@ -154,10 +142,10 @@ export default function Page() {
           </div>
 
           {/* Footer */}
-          <div className="border-t-2 border-primary pt-3 text-center">
+          <div className="border-t-2 border-primary pt-1 text-center">
             <div className="flex items-center justify-center gap-1 text-xs">
-              <Clock size={14} className="text-primary" />
-              <span className="font-medium">8:00 AM - 8:00 PM</span>
+              <Clock size={12} className="text-primary" />
+              <span className="font-medium text-xs">8:00 AM - 8:00 PM</span>
             </div>
           </div>
         </div>
