@@ -94,22 +94,20 @@ export default function Page() {
       <div ref={exportRef} className="absolute -left-full -top-full w-full bg-white" style={{ width: '210mm', padding: '15mm' }}>
         <div className="flex flex-col">
           {/* Header */}
-          <div className="mb-2 pb-2">
+          <div className="mb-2 pb-2 flex items-start gap-4">
             {/* Logo at Left */}
-            <div className="flex items-start gap-2 mb-1">
-              <div className="flex-shrink-0">
-                <div className="text-3xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
-              </div>
-              <div className="flex-1">
-                <div className="text-xs font-semibold tracking-widest text-muted-foreground mb-0">HAIR SALON</div>
-                <h1 className="text-lg font-light italic text-primary">Quỳnh Hương</h1>
-              </div>
+            <div className="flex-shrink-0">
+              <div className="text-3xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
             </div>
-
-            {/* Contact Info - Center */}
-            <div className="border-t border-primary pt-2 text-center text-xs text-foreground">
-              <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
-              <p className="font-bold text-primary text-xs">☎ 0985 257 577</p>
+            
+            {/* Centered Title and Contact */}
+            <div className="flex-1 text-center">
+              <div className="text-xs font-semibold tracking-widest text-muted-foreground mb-0">HAIR SALON</div>
+              <h1 className="text-lg font-light italic text-primary mb-1">Quỳnh Hương</h1>
+              <div className="border-t border-primary pt-1 text-xs text-foreground">
+                <p className="font-semibold mb-0 text-xs">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
+                <p className="font-bold text-primary text-xs">☎ 0985 257 577</p>
+              </div>
             </div>
           </div>
 
