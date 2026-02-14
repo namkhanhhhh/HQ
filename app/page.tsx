@@ -101,12 +101,14 @@ export default function Page() {
             </div>
             
             {/* Centered Title and Contact */}
-            <div className="flex-1 text-center border-t border-primary pt-1">
-              <div className="text-xs font-semibold tracking-widest text-muted-foreground mb-0.5">HAIR SALON</div>
-              <h1 className="text-base font-light italic text-primary mb-1">Quỳnh Hương</h1>
-              <div className="text-xs text-foreground leading-tight">
-                <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
-                <p className="font-bold text-primary">☎ 0985 257 577</p>
+            <div className="flex-1 text-center">
+              <div className="text-sm font-semibold tracking-widest text-muted-foreground mb-0.5">HAIR SALON</div>
+              <h1 className="text-xl font-light italic text-primary mb-2">Quỳnh Hương</h1>
+              <div className="border-t-2 border-primary pt-2">
+                <div className="text-xs text-foreground leading-tight">
+                  <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
+                  <p className="font-bold text-primary">☎ 0985 257 577</p>
+                </div>
               </div>
             </div>
           </div>
@@ -160,12 +162,14 @@ export default function Page() {
             </div>
             
             {/* Centered Title and Contact */}
-            <div className="flex-1 text-center border-t border-primary pt-1">
-              <div className="text-xs font-semibold tracking-widest text-muted-foreground mb-0.5">HAIR SALON</div>
-              <h1 className="text-base font-light italic text-primary mb-1">Quỳnh Hương</h1>
-              <div className="text-xs text-foreground leading-tight">
-                <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
-                <p className="font-bold text-primary">☎ 0985 257 577</p>
+            <div className="flex-1 text-center">
+              <div className="text-sm font-semibold tracking-widest text-muted-foreground mb-0.5">HAIR SALON</div>
+              <h1 className="text-xl font-light italic text-primary mb-2">Quỳnh Hương</h1>
+              <div className="border-t-2 border-primary pt-2">
+                <div className="text-xs text-foreground leading-tight">
+                  <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
+                  <p className="font-bold text-primary">☎ 0985 257 577</p>
+                </div>
               </div>
             </div>
           </div>
