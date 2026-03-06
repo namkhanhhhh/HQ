@@ -13,6 +13,9 @@ interface Service {
 
 const services: Service[] = [
   // Dịch vụ tóc
+  { vietnameseName: 'Cắt tóc nữ', englishName: 'Lady\'s Haircut', price: '400.000 VNĐ' },
+  { vietnameseName: 'Cắt tóc nam', englishName: 'Men\'s Haircut', price: '400.000 VNĐ' },
+  { vietnameseName: 'Cắt tóc mái', englishName: 'Bangs / Fringe Trim', price: '100.000 VNĐ' },
   { vietnameseName: 'Phục hồi tóc / Mặt nạ chuyên sâu', englishName: 'Deep Hair Repair Mask', price: '800.000 - 2.000.000 VNĐ', highlight: true },
   { vietnameseName: 'Nhuộm, tạo màu', englishName: 'Hair Coloring & Toning', price: '800.000 - 3.000.000 VNĐ', highlight: true },
   { vietnameseName: 'Tẩy tóc', englishName: 'Hair Bleaching', price: '1.000.000 - 3.000.000 VNĐ', highlight: true },
@@ -20,9 +23,6 @@ const services: Service[] = [
   { vietnameseName: 'Uốn xoăn vĩnh viễn', englishName: 'Permanent Wave (Perm)', price: '800.000 - 3.000.000 VNĐ', highlight: true },
   { vietnameseName: 'Ép tóc', englishName: 'Hair Rebonding / Flat Ironing', price: '800.000 - 3.000.000 VNĐ', highlight: true },
   { vietnameseName: 'Hấp dưỡng', englishName: 'Hair Steam Treatment', price: '500.000 - 1.800.000 VNĐ', highlight: true },
-  { vietnameseName: 'Cắt tóc nữ', englishName: 'Lady\'s Haircut', price: '400.000 VNĐ' },
-  { vietnameseName: 'Cắt tóc nam', englishName: 'Men\'s Haircut', price: '400.000 VNĐ' },
-  { vietnameseName: 'Cắt tóc mái', englishName: 'Bangs / Fringe Trim', price: '100.000 VNĐ' },
   { vietnameseName: 'Gội đầu', englishName: 'Hair Wash', price: '150.000 VNĐ' },
   { vietnameseName: 'Sấy tạo kiểu', englishName: 'Blow-dry & Styling', price: '200.000 VNĐ' },
   // Massage & chăm sóc da
