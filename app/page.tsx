@@ -12,32 +12,37 @@ interface Service {
 }
 
 const services: Service[] = [
+  // Dịch vụ tóc
   { vietnameseName: 'Phục hồi tóc / Mặt nạ chuyên sâu', englishName: 'Deep Hair Repair Mask', price: '800.000 - 2.000.000 VNĐ', highlight: true },
   { vietnameseName: 'Nhuộm, tạo màu', englishName: 'Hair Coloring & Toning', price: '800.000 - 3.000.000 VNĐ', highlight: true },
   { vietnameseName: 'Tẩy tóc', englishName: 'Hair Bleaching', price: '1.000.000 - 3.000.000 VNĐ', highlight: true },
   { vietnameseName: 'Chải duỗi vĩnh viễn', englishName: 'Permanent Hair Straightening', price: '800.000 - 3.000.000 VNĐ', highlight: true },
   { vietnameseName: 'Uốn xoăn vĩnh viễn', englishName: 'Permanent Wave (Perm)', price: '800.000 - 3.000.000 VNĐ', highlight: true },
+  { vietnameseName: 'Ép tóc', englishName: 'Hair Rebonding / Flat Ironing', price: '800.000 - 3.000.000 VNĐ', highlight: true },
+  { vietnameseName: 'Hấp dưỡng', englishName: 'Hair Steam Treatment', price: '500.000 - 1.800.000 VNĐ', highlight: true },
   { vietnameseName: 'Cắt tóc nữ', englishName: 'Lady\'s Haircut', price: '400.000 VNĐ' },
   { vietnameseName: 'Cắt tóc nam', englishName: 'Men\'s Haircut', price: '400.000 VNĐ' },
   { vietnameseName: 'Cắt tóc mái', englishName: 'Bangs / Fringe Trim', price: '100.000 VNĐ' },
-  { vietnameseName: 'Ép tóc', englishName: 'Hair Rebonding / Flat Ironing', price: '800.000 - 3.000.000 VNĐ', highlight: true },
-  { vietnameseName: 'Hấp dưỡng', englishName: 'Hair Steam Treatment', price: '500.000 - 1.800.000 VNĐ', highlight: true },
   { vietnameseName: 'Gội đầu', englishName: 'Hair Wash', price: '150.000 VNĐ' },
   { vietnameseName: 'Sấy tạo kiểu', englishName: 'Blow-dry & Styling', price: '200.000 VNĐ' },
+  // Massage & chăm sóc da
+  { vietnameseName: 'Massage vai gáy (30ph)', englishName: 'Neck & Shoulder Massage', price: '300.000 VNĐ', highlight: true },
+  { vietnameseName: 'Massage chân (60ph)', englishName: 'Foot Massage', price: '500.000 VNĐ', highlight: true },
   { vietnameseName: 'Xông hơi mặt', englishName: 'Facial Steam Treatment', price: '200.000 VNĐ' },
   { vietnameseName: 'Đắp mặt nạ', englishName: 'Face Mask Treatment', price: '200.000 VNĐ' },
   { vietnameseName: 'Tẩy da chết mặt', englishName: 'Facial Exfoliation', price: '100.000 VNĐ' },
   { vietnameseName: 'Tẩy da chết, chà gót chân', englishName: 'Foot Scrub & Heel Exfoliation', price: '200.000 VNĐ' },
-  { vietnameseName: 'Sơn sửa móng tay (Gel)', englishName: 'Gel Manicure', price: '200.000 VNĐ' },
-  { vietnameseName: 'Sơn sửa móng chân (Gel)', englishName: 'Gel Pedicure', price: '200.000 VNĐ' },
-  { vietnameseName: 'Sơn, vẽ móng', englishName: 'Nail Art & Polish', price: '500.000 - 1.000.000 VNĐ', highlight: true },
-  { vietnameseName: 'Làm móng giả', englishName: 'Nail Extensions', price: '500.000 VNĐ' },
-  { vietnameseName: 'Móng đính đá', englishName: 'Nail Rhinestones/Diamonds', price: 'Theo mẫu (On Request)' },
+  // Waxing
   { vietnameseName: 'Wax lông mày', englishName: 'Eyebrow Waxing', price: '300.000 VNĐ' },
   { vietnameseName: 'Waxing 2 tay', englishName: 'Full Arm Waxing', price: '500.000 VNĐ' },
   { vietnameseName: 'Waxing 2 chân', englishName: 'Full Leg Waxing', price: '800.000 - 1.000.000 VNĐ', highlight: true },
-  { vietnameseName: 'Massage vai gáy (30ph)', englishName: 'Neck & Shoulder Massage', price: '300.000 VNĐ', highlight: true },
-  { vietnameseName: 'Massage chân (60ph)', englishName: 'Foot Massage', price: '500.000 VNĐ', highlight: true },
+  // Nail
+  { vietnameseName: 'Sơn, vẽ móng', englishName: 'Nail Art & Polish', price: '500.000 - 1.000.000 VNĐ', highlight: true },
+  { vietnameseName: 'Sơn sửa móng tay (Gel)', englishName: 'Gel Manicure', price: '200.000 VNĐ' },
+  { vietnameseName: 'Sơn sửa móng chân (Gel)', englishName: 'Gel Pedicure', price: '200.000 VNĐ' },
+  { vietnameseName: 'Làm móng giả', englishName: 'Nail Extensions', price: '500.000 VNĐ' },
+  { vietnameseName: 'Móng đính đá', englishName: 'Nail Rhinestones/Diamonds', price: 'Theo mẫu (On Request)' },
+  // Trang điếm
   { vietnameseName: 'Trang điểm', englishName: 'Professional Makeup', price: '500.000 VNĐ' },
 ]
 
