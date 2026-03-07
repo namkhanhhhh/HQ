@@ -138,16 +138,16 @@ export default function Page() {
           {/* Services List */}
           <div className="text-xs">
             {services.map((service, index) => (
-              <div key={index} className={`grid grid-cols-3 gap-2 border-b border-secondary py-1.5 px-1 ${
+              <div key={index} className={`grid grid-cols-3 gap-2 border-b border-secondary py-3 px-1 ${
                 service.highlight ? 'bg-red-50' : ''
               }`}>
-                <div className={`font-medium leading-tight text-xs ${service.highlight ? 'text-primary font-bold' : 'text-foreground'}`}>
+                <div className={`font-medium leading-normal text-xs ${service.highlight ? 'text-primary font-bold' : 'text-foreground'}`}>
                   {service.vietnameseName}
                 </div>
-                <div className={`italic leading-tight text-xs ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
+                <div className={`italic leading-normal text-xs ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
                   {service.englishName}
                 </div>
-                <div className={`text-right font-semibold leading-tight text-xs ${
+                <div className={`text-right font-semibold leading-normal text-xs ${
                   service.highlight ? 'text-primary' : 'text-foreground'
                 }`}>
                   {service.price}
@@ -199,16 +199,16 @@ export default function Page() {
           {/* Services List */}
           <div className="flex-1 overflow-y-auto text-xs">
             {services.map((service, index) => (
-              <div key={index} className={`grid grid-cols-3 gap-2 border-b border-secondary py-1.5 px-1 ${
+              <div key={index} className={`grid grid-cols-3 gap-2 border-b border-secondary py-3 px-1 ${
                 service.highlight ? 'bg-red-50' : ''
               }`}>
-                <div className={`font-medium leading-tight ${service.highlight ? 'text-primary font-bold' : 'text-foreground'}`}>
+                <div className={`font-medium leading-normal ${service.highlight ? 'text-primary font-bold' : 'text-foreground'}`}>
                   {service.vietnameseName}
                 </div>
-                <div className={`italic leading-tight ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
+                <div className={`italic leading-normal ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
                   {service.englishName}
                 </div>
-                <div className={`text-right font-semibold leading-tight ${
+                <div className={`text-right font-semibold leading-normal ${
                   service.highlight ? 'text-primary' : 'text-foreground'
                 }`}>
                   {service.price}
@@ -217,13 +217,7 @@ export default function Page() {
             ))}
           </div>
 
-          {/* Footer */}
-          <div className="border-t-2 border-primary pt-2 text-center mt-1">
-            <div className="flex items-center justify-center gap-1 text-xs">
-              <Clock size={12} className="text-primary" />
-              <span className="font-medium text-xs">8:00 AM - 8:00 PM</span>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
