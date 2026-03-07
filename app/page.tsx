@@ -101,21 +101,21 @@ export default function Page() {
       <div ref={exportRef} className="absolute -left-full -top-full w-full bg-white" style={{ width: '210mm', padding: '12mm 15mm' }}>
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="mb-3 pb-3 flex items-start gap-4">
+          <div className="mb-4 pb-2 flex items-start gap-4">
             {/* Logo at Left */}
-            <div className="flex-shrink-0 pt-1">
-              <div className="text-3xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
+            <div className="flex-shrink-0 pt-0.5">
+              <div className="text-2xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
             </div>
             
             {/* Centered Title and Contact */}
             <div className="flex-1 text-center">
-              <div className="text-sm font-semibold tracking-widest text-muted-foreground mb-0.5">HAIR SALON</div>
-              <h1 className="text-xl font-light italic text-primary mb-2">Quỳnh Hương</h1>
-              <div className="border-t-2 border-primary pt-2">
+              <div className="text-xs font-semibold tracking-widest text-muted-foreground mb-0">HAIR SALON</div>
+              <h1 className="text-base font-light italic text-primary mb-1">Quỳnh Hương</h1>
+              <div className="border-t-2 border-primary pt-1.5">
                 <div className="text-xs text-foreground leading-tight">
                   <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
                   <p className="font-bold text-primary">☎ 0985 257 577</p>
-                  <p className="font-semibold mt-1 flex items-center justify-center gap-1">
+                  <p className="font-semibold mt-0.5 flex items-center justify-center gap-1">
                     <Clock size={12} className="text-primary" />
                     <span>8:00 AM - 8:00 PM</span>
                   </p>
@@ -166,21 +166,21 @@ export default function Page() {
       <div ref={posterRef} className="relative w-full max-w-2xl bg-white shadow-2xl" style={{ aspectRatio: '210/297' }}>
         <div className="flex h-full flex-col p-6">
           {/* Header */}
-          <div className="mb-3 pb-3 flex items-start gap-4">
+          <div className="mb-4 pb-2 flex items-start gap-4">
             {/* Logo at Left */}
-            <div className="flex-shrink-0 pt-1">
-              <div className="text-3xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
+            <div className="flex-shrink-0 pt-0.5">
+              <div className="text-2xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
             </div>
             
             {/* Centered Title and Contact */}
             <div className="flex-1 text-center">
-              <div className="text-sm font-semibold tracking-widest text-muted-foreground mb-0.5">HAIR SALON</div>
-              <h1 className="text-xl font-light italic text-primary mb-2">Quỳnh Hương</h1>
-              <div className="border-t-2 border-primary pt-2">
+              <div className="text-xs font-semibold tracking-widest text-muted-foreground mb-0">HAIR SALON</div>
+              <h1 className="text-base font-light italic text-primary mb-1">Quỳnh Hương</h1>
+              <div className="border-t-2 border-primary pt-1.5">
                 <div className="text-xs text-foreground leading-tight">
                   <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
                   <p className="font-bold text-primary">☎ 0985 257 577</p>
-                  <p className="font-semibold mt-1 flex items-center justify-center gap-1">
+                  <p className="font-semibold mt-0.5 flex items-center justify-center gap-1">
                     <Clock size={12} className="text-primary" />
                     <span>8:00 AM - 8:00 PM</span>
                   </p>
