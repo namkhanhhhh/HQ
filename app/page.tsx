@@ -15,6 +15,7 @@ const services: Service[] = [
   // Dịch vụ tóc
   { vietnameseName: 'Cắt tóc nữ', englishName: 'Lady\'s Haircut', price: '400.000 VNĐ' },
   { vietnameseName: 'Cắt tóc nam', englishName: 'Men\'s Haircut', price: '400.000 VNĐ' },
+  { vietnameseName: 'Cạo râu', englishName: 'Shaving', price: '200.000 VNĐ' },
   { vietnameseName: 'Cắt tóc mái', englishName: 'Bangs / Fringe Trim', price: '100.000 VNĐ' },
   { vietnameseName: 'Nhuộm, tạo màu', englishName: 'Hair Coloring & Toning', price: '800.000 - 3.000.000 VNĐ', highlight: true },
   { vietnameseName: 'Chải duỗi vĩnh viễn', englishName: 'Permanent Hair Straightening', price: '800.000 - 3.000.000 VNĐ', highlight: true },
@@ -34,6 +35,7 @@ const services: Service[] = [
   { vietnameseName: 'Tẩy da chết, chà gót chân', englishName: 'Foot Scrub & Heel Exfoliation', price: '200.000 VNĐ' },
   // Waxing
   { vietnameseName: 'Wax lông mày', englishName: 'Eyebrow Waxing', price: '300.000 VNĐ' },
+  { vietnameseName: 'Wax ria mép', englishName: 'Upper Lip Waxing', price: '200.000 VNĐ' },
   { vietnameseName: 'Waxing 2 tay', englishName: 'Full Arm Waxing', price: '500.000 VNĐ' },
   { vietnameseName: 'Waxing 2 chân', englishName: 'Full Leg Waxing', price: '800.000 - 1.000.000 VNĐ', highlight: true },
   // Nail
