@@ -115,6 +115,10 @@ export default function Page() {
                 <div className="text-xs text-foreground leading-tight">
                   <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
                   <p className="font-bold text-primary">☎ 0985 257 577</p>
+                  <p className="font-semibold mt-1 flex items-center justify-center gap-1">
+                    <Clock size={12} className="text-primary" />
+                    <span>8:00 AM - 8:00 PM</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -176,6 +180,10 @@ export default function Page() {
                 <div className="text-xs text-foreground leading-tight">
                   <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
                   <p className="font-bold text-primary">☎ 0985 257 577</p>
+                  <p className="font-semibold mt-1 flex items-center justify-center gap-1">
+                    <Clock size={12} className="text-primary" />
+                    <span>8:00 AM - 8:00 PM</span>
+                  </p>
                 </div>
               </div>
             </div>
