@@ -15,7 +15,6 @@ const services: Service[] = [
   // Dịch vụ tóc
   { vietnameseName: 'Cắt tóc nữ', englishName: 'Lady\'s Haircut', price: '400.000 VNĐ' },
   { vietnameseName: 'Cắt tóc nam', englishName: 'Men\'s Haircut', price: '400.000 VNĐ' },
-  { vietnameseName: 'Cạo râu', englishName: 'Shaving', price: '200.000 VNĐ' },
   { vietnameseName: 'Cắt tóc mái', englishName: 'Bangs / Fringe Trim', price: '100.000 VNĐ' },
   { vietnameseName: 'Nhuộm, tạo màu', englishName: 'Hair Coloring & Toning', price: '800.000 - 3.000.000 VNĐ', highlight: true },
   { vietnameseName: 'Chải duỗi vĩnh viễn', englishName: 'Permanent Hair Straightening', price: '800.000 - 3.000.000 VNĐ', highlight: true },
@@ -35,7 +34,6 @@ const services: Service[] = [
   { vietnameseName: 'Tẩy da chết, chà gót chân', englishName: 'Foot Scrub & Heel Exfoliation', price: '200.000 VNĐ' },
   // Waxing
   { vietnameseName: 'Wax lông mày', englishName: 'Eyebrow Waxing', price: '300.000 VNĐ' },
-  { vietnameseName: 'Wax ria mép', englishName: 'Upper Lip Waxing', price: '200.000 VNĐ' },
   { vietnameseName: 'Waxing 2 tay', englishName: 'Full Arm Waxing', price: '500.000 VNĐ' },
   { vietnameseName: 'Waxing 2 chân', englishName: 'Full Leg Waxing', price: '800.000 - 1.000.000 VNĐ', highlight: true },
   // Nail
@@ -98,48 +96,48 @@ export default function Page() {
       </button>
 
       {/* Hidden Export Container - Full content for PDF */}
-      <div ref={exportRef} className="absolute -left-full -top-full bg-white" style={{ width: '210mm', padding: '16px', boxSizing: 'border-box' }}>
-        <div className="flex flex-col">
+      <div ref={exportRef} className="absolute -left-full -top-full w-full bg-white" style={{ width: '210mm', padding: '12mm 15mm' }}>
+        <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="mb-2 pb-2 flex items-start gap-3">
+          <div className="mb-3 pb-3 flex items-start gap-4">
             {/* Logo at Left */}
-            <div className="flex-shrink-0">
-              <div className="text-2xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
+            <div className="flex-shrink-0 pt-1">
+              <div className="text-3xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
             </div>
             
             {/* Centered Title and Contact */}
             <div className="flex-1 text-center">
-              <div className="text-xs font-semibold tracking-widest text-muted-foreground mb-0">HAIR SALON</div>
-              <h1 className="text-lg font-light italic text-primary mb-0.5">Quỳnh Hương</h1>
-              <div className="border-t-2 border-primary pt-1">
+              <div className="text-sm font-semibold tracking-widest text-muted-foreground mb-0.5">HAIR SALON</div>
+              <h1 className="text-xl font-light italic text-primary mb-2">Quỳnh Hương</h1>
+              <div className="border-t-2 border-primary pt-2">
                 <div className="text-xs text-foreground leading-tight">
-                  <p className="font-semibold mb-0 text-xs">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
-                  <p className="font-bold text-primary text-xs">☎ 0985 257 577</p>
+                  <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
+                  <p className="font-bold text-primary">☎ 0985 257 577</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Table Header */}
-          <div className="grid grid-cols-3 gap-2 border-b-2 border-primary pb-1 text-xs font-bold text-primary">
+          <div className="grid grid-cols-3 gap-2 border-b-2 border-primary pb-2 text-xs font-bold text-primary">
             <div>Dịch Vụ</div>
             <div>Service</div>
             <div className="text-right">Giá / Price</div>
           </div>
 
           {/* Services List */}
-          <div className="text-xs">
+          <div className="text-xs flex-1">
             {services.map((service, index) => (
-              <div key={index} className={`grid grid-cols-3 gap-2 border-b border-secondary py-1 px-0.5 ${
+              <div key={index} className={`grid grid-cols-3 gap-2 border-b border-secondary py-2 px-1 ${
                 service.highlight ? 'bg-red-50' : ''
               }`}>
-                <div className={`font-medium leading-tight text-xs ${service.highlight ? 'text-primary font-bold' : 'text-foreground'}`}>
+                <div className={`font-medium leading-tight ${service.highlight ? 'text-primary font-bold' : 'text-foreground'}`}>
                   {service.vietnameseName}
                 </div>
-                <div className={`italic leading-tight text-xs ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
+                <div className={`italic leading-tight ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
                   {service.englishName}
                 </div>
-                <div className={`text-right font-semibold leading-tight text-xs ${
+                <div className={`text-right font-semibold leading-tight ${
                   service.highlight ? 'text-primary' : 'text-foreground'
                 }`}>
                   {service.price}
@@ -149,7 +147,7 @@ export default function Page() {
           </div>
 
           {/* Footer */}
-          <div className="border-t-2 border-primary pt-1 text-center mt-1">
+          <div className="border-t-2 border-primary pt-2 text-center mt-1">
             <div className="flex items-center justify-center gap-1 text-xs">
               <Clock size={12} className="text-primary" />
               <span className="font-medium text-xs">8:00 AM - 8:00 PM</span>
@@ -162,27 +160,27 @@ export default function Page() {
       <div ref={posterRef} className="relative w-full max-w-2xl bg-white shadow-2xl" style={{ aspectRatio: '210/297' }}>
         <div className="flex h-full flex-col p-6">
           {/* Header */}
-          <div className="mb-2 pb-2 flex items-start gap-3">
+          <div className="mb-3 pb-3 flex items-start gap-4">
             {/* Logo at Left */}
-            <div className="flex-shrink-0">
-              <div className="text-2xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
+            <div className="flex-shrink-0 pt-1">
+              <div className="text-3xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
             </div>
             
             {/* Centered Title and Contact */}
             <div className="flex-1 text-center">
-              <div className="text-xs font-semibold tracking-widest text-muted-foreground mb-0">HAIR SALON</div>
-              <h1 className="text-lg font-light italic text-primary mb-0.5">Quỳnh Hương</h1>
-              <div className="border-t-2 border-primary pt-1">
+              <div className="text-sm font-semibold tracking-widest text-muted-foreground mb-0.5">HAIR SALON</div>
+              <h1 className="text-xl font-light italic text-primary mb-2">Quỳnh Hương</h1>
+              <div className="border-t-2 border-primary pt-2">
                 <div className="text-xs text-foreground leading-tight">
-                  <p className="font-semibold mb-0 text-xs">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
-                  <p className="font-bold text-primary text-xs">☎ 0985 257 577</p>
+                  <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
+                  <p className="font-bold text-primary">☎ 0985 257 577</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Table Header */}
-          <div className="grid grid-cols-3 gap-2 border-b-2 border-primary pb-1 text-xs font-bold text-primary">
+          <div className="grid grid-cols-3 gap-2 border-b-2 border-primary pb-2 text-xs font-bold text-primary">
             <div>Dịch Vụ</div>
             <div>Service</div>
             <div className="text-right">Giá / Price</div>
@@ -191,16 +189,16 @@ export default function Page() {
           {/* Services List */}
           <div className="flex-1 overflow-y-auto text-xs">
             {services.map((service, index) => (
-              <div key={index} className={`grid grid-cols-3 gap-2 border-b border-secondary py-1 px-0.5 ${
+              <div key={index} className={`grid grid-cols-3 gap-2 border-b border-secondary py-2 px-1 ${
                 service.highlight ? 'bg-red-50' : ''
               }`}>
-                <div className={`font-medium leading-tight text-xs ${service.highlight ? 'text-primary font-bold' : 'text-foreground'}`}>
+                <div className={`font-medium leading-tight ${service.highlight ? 'text-primary font-bold' : 'text-foreground'}`}>
                   {service.vietnameseName}
                 </div>
-                <div className={`italic leading-tight text-xs ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
+                <div className={`italic leading-tight ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
                   {service.englishName}
                 </div>
-                <div className={`text-right font-semibold leading-tight text-xs ${
+                <div className={`text-right font-semibold leading-tight ${
                   service.highlight ? 'text-primary' : 'text-foreground'
                 }`}>
                   {service.price}
@@ -210,14 +208,12 @@ export default function Page() {
           </div>
 
           {/* Footer */}
-          <div className="border-t-2 border-primary pt-1 text-center mt-1">
+          <div className="border-t-2 border-primary pt-2 text-center mt-1">
             <div className="flex items-center justify-center gap-1 text-xs">
               <Clock size={12} className="text-primary" />
               <span className="font-medium text-xs">8:00 AM - 8:00 PM</span>
             </div>
           </div>
-
-
         </div>
       </div>
     </div>
