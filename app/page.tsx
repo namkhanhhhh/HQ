@@ -98,62 +98,60 @@ export default function Page() {
       </button>
 
       {/* Hidden Export Container - Full content for PDF */}
-      <div ref={exportRef} className="absolute -left-full -top-full w-full bg-white" style={{ width: '210mm', padding: '12mm 15mm' }}>
-        <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="mb-3 pb-3 flex items-start gap-4">
-            {/* Logo at Left */}
-            <div className="flex-shrink-0 pt-1">
-              <div className="text-3xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
-            </div>
-            
-            {/* Centered Title and Contact */}
-            <div className="flex-1 text-center">
-              <div className="text-sm font-semibold tracking-widest text-muted-foreground mb-0.5">HAIR SALON</div>
-              <h1 className="text-xl font-light italic text-primary mb-2">Quỳnh Hương</h1>
-              <div className="border-t-2 border-primary pt-2">
-                <div className="text-xs text-foreground leading-tight">
-                  <p className="font-semibold mb-0">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
-                  <p className="font-bold text-primary">☎ 0985 257 577</p>
-                </div>
+      <div ref={exportRef} className="absolute -left-full -top-full w-full bg-white" style={{ width: '210mm', height: '297mm', padding: '10mm 12mm', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
+        {/* Header */}
+        <div className="mb-2 pb-2 flex items-start gap-3 flex-shrink-0">
+          {/* Logo at Left */}
+          <div className="flex-shrink-0">
+            <div className="text-2xl font-light text-primary" style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>QH</div>
+          </div>
+          
+          {/* Centered Title and Contact */}
+          <div className="flex-1 text-center">
+            <div className="text-xs font-semibold tracking-widest text-muted-foreground mb-0">HAIR SALON</div>
+            <h1 className="text-sm font-light italic text-primary mb-1">Quỳnh Hương</h1>
+            <div className="border-t-2 border-primary pt-1">
+              <div className="text-xs text-foreground leading-tight">
+                <p className="font-semibold mb-0 text-xs">51A Nguyễn Siêu, Hoàn Kiếm, Hà Nội</p>
+                <p className="font-bold text-primary text-xs">☎ 0985 257 577</p>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Table Header */}
-          <div className="grid grid-cols-3 gap-2 border-b-2 border-primary pb-2 text-xs font-bold text-primary">
-            <div>Dịch Vụ</div>
-            <div>Service</div>
-            <div className="text-right">Giá / Price</div>
-          </div>
+        {/* Table Header */}
+        <div className="grid grid-cols-3 gap-1 border-b-2 border-primary pb-1 text-xs font-bold text-primary flex-shrink-0">
+          <div>Dịch Vụ</div>
+          <div>Service</div>
+          <div className="text-right">Giá / Price</div>
+        </div>
 
-          {/* Services List */}
-          <div className="text-xs flex-1">
-            {services.map((service, index) => (
-              <div key={index} className={`grid grid-cols-3 gap-2 border-b border-secondary py-2 px-1 ${
-                service.highlight ? 'bg-red-50' : ''
+        {/* Services List */}
+        <div className="text-xs flex-1 overflow-hidden" style={{ minHeight: 0 }}>
+          {services.map((service, index) => (
+            <div key={index} className={`grid grid-cols-3 gap-1 border-b border-secondary py-1 px-0.5 ${
+              service.highlight ? 'bg-red-50' : ''
+            }`}>
+              <div className={`font-medium leading-tight text-xs ${service.highlight ? 'text-primary font-bold' : 'text-foreground'}`}>
+                {service.vietnameseName}
+              </div>
+              <div className={`italic leading-tight text-xs ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
+                {service.englishName}
+              </div>
+              <div className={`text-right font-semibold leading-tight text-xs ${
+                service.highlight ? 'text-primary' : 'text-foreground'
               }`}>
-                <div className={`font-medium leading-tight ${service.highlight ? 'text-primary font-bold' : 'text-foreground'}`}>
-                  {service.vietnameseName}
-                </div>
-                <div className={`italic leading-tight ${service.highlight ? 'text-primary' : 'text-muted-foreground'}`}>
-                  {service.englishName}
-                </div>
-                <div className={`text-right font-semibold leading-tight ${
-                  service.highlight ? 'text-primary' : 'text-foreground'
-                }`}>
-                  {service.price}
-                </div>
+                {service.price}
               </div>
-            ))}
-          </div>
-
-          {/* Footer */}
-          <div className="border-t-2 border-primary pt-2 text-center mt-1">
-            <div className="flex items-center justify-center gap-1 text-xs">
-              <Clock size={12} className="text-primary" />
-              <span className="font-medium text-xs">8:00 AM - 8:00 PM</span>
             </div>
+          ))}
+        </div>
+
+        {/* Footer */}
+        <div className="border-t-2 border-primary pt-1 text-center flex-shrink-0">
+          <div className="flex items-center justify-center gap-1 text-xs">
+            <Clock size={10} className="text-primary" />
+            <span className="font-medium text-xs">8:00 AM - 8:00 PM</span>
           </div>
         </div>
       </div>
